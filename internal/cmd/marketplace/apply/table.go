@@ -66,11 +66,15 @@ func buildFailureTable(items []marketplace.ApplyResponseItem) string {
 		} else {
 			validationErrors = item.ValidationErrors
 		}
-		for i, valErr := range validationErrors {
-			validationErrorsStr += valErr.Message
-			if len(validationErrors)-1 > i {
-				validationErrorsStr += "\n"
+		if len(validationErrors) > 0 {
+			var builder strings.Builder
+			for i, valErr := range validationErrors {
+				if i > 0 {
+					builder.WriteString("\n")
+				}
+				builder.WriteString(valErr.Message)
 			}
+			validationErrorsStr = builder.String()
 		}
 		if validationErrorsStr == "" {
 			validationErrorsStr = "-"

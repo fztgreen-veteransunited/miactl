@@ -35,7 +35,7 @@ This command allows you to create new versions and list existing versions.`
 
 	createVersionCmdUsage = "create"
 	createVersionCmdShort = "Create a new version for a project"
-	createVersionCmdLong  = `Create a new version for the specified Project based on an existing revision.` 
+	createVersionCmdLong  = `Create a new version for the specified Project based on an existing revision.`
 )
 
 type versionProjectOptions struct {
@@ -161,7 +161,7 @@ func createVersion(ctx context.Context, client *client.APIClient, options versio
 
 	// Create the endpoint
 	endpoint := fmt.Sprintf("/api/backend/projects/%s/versions", options.ProjectID)
-	
+
 	response, err := client.
 		Post().
 		APIPath(endpoint).
