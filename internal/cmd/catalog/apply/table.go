@@ -61,9 +61,12 @@ func buildFailureTable(items []catalog.ApplyResponseItem) string {
 	columnTransform := func(item catalog.ApplyResponseItem) []string {
 		var builder strings.Builder
 		var errors = item.Errors
-		for i, valErr := range errors {
-			if i > 0 {
-				builder.WriteString("\n")
+		if len(errors) > 0 {
+			for i, valErr := range errors {
+				if i > 0 {
+					builder.WriteString("\n")
+				}
+				builder.WriteString(valErr.Message)
 			}
 			builder.WriteString(valErr.Message)
 		}
