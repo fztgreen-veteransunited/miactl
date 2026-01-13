@@ -68,7 +68,6 @@ func buildFailureTable(items []catalog.ApplyResponseItem) string {
 				}
 				builder.WriteString(valErr.Message)
 			}
-			builder.WriteString(valErr.Message)
 		}
 		errorsStr := builder.String()
 		if errorsStr == "" {
