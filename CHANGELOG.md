@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.22.0] - 2026-02-03
+
 ### Changed
 
 - update go version to 1.25.6
@@ -261,7 +263,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### BREAKING
 
-- move serviceaccount commads under `company iam add`
+- move serviceaccount commands under `company iam add`
 
 ### Added
 
@@ -286,7 +288,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- remove conflicting shortand flag `-v` from `miactl marketplace delete` command
+- remove conflicting shorthand flag `-v` from `miactl marketplace delete` command
 - creation of basic auth service account
 
 ## [v0.10.0] - 2023-12-20
@@ -453,7 +455,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - create cli sdk
 - create cli renderer
 
-[unreleased]: https://github.com/mia-platform/miactl/compare/v0.21.2...HEAD
+[unreleased]: https://github.com/mia-platform/miactl/compare/v0.22.0...HEAD
+[v0.22.0]: https://github.com/mia-platform/miactl/compare/v0.21.2...v0.22.0
 [v0.21.2]: https://github.com/mia-platform/miactl/compare/v0.21.1...v0.21.2
 [v0.21.1]: https://github.com/mia-platform/miactl/compare/v0.21.0...v0.21.1
 [v0.21.0]: https://github.com/mia-platform/miactl/compare/v0.20.0...v0.21.0
