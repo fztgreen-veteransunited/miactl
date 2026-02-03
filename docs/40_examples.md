@@ -74,9 +74,9 @@ miactl deploy development --no-semver --revision tags/v1.0.0
 
 The commands are the same used above in the [Deploy Project](#deploy-project) section, but you need to use a
 _Service Account_ for that.  
-If you don't know how to create a _Service Account_, read the [dedicated documentation](https://docs.mia-platform.eu/docs/development_suite/identity-and-access-management/manage-service-accounts).
+If you don't know how to create a _Service Account_, read the [dedicated documentation](https://docs.mia-platform.eu/docs/products/console/identity-and-access-management/manage-service-accounts).
 
-The _Service Account_ can be created with [two different authentication methods](https://docs.mia-platform.eu/docs/development_suite/identity-and-access-management/manage-service-accounts#adding-a-service-account):
+The _Service Account_ can be created with [two different authentication methods](https://docs.mia-platform.eu/docs/products/console/identity-and-access-management/manage-service-accounts#adding-a-service-account):
 
 * _Client Secret Basic_: the service account authenticates by presenting its `client_id` and `client_secret`;
 * _Private Key JWT_: the service account authenticates by signing a `JWT` (JSON Web Token) using its private key.

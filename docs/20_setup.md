@@ -99,7 +99,7 @@ we suggest the [binary installation](#binary-download) since it's the most strai
 #### Setup a service account
 
 Due to some technical restriction, it is not possible to login with a browser when using WSL.
-For this reason, we need to [setup a service account](/development_suite/identity-and-access-management/manage-service-accounts.md#service-account-authentication).
+For this reason, we need to [setup a service account](https://docs.mia-platform.eu/docs/products/console/identity-and-access-management/manage-service-accounts#service-account-authentication).
 
 Once you have created it, you need to use the [`miactl context auth` command](./30_commands.md#auth) to setup
 authentication.
