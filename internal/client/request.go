@@ -212,7 +212,7 @@ func (r *Request) request(ctx context.Context, fn func(*http.Request, *http.Resp
 		return err
 	}
 
-	response, err := r.restClient.client.Do(httpRequest) //nolint:gosec
+	response, err := r.restClient.client.Do(httpRequest)
 	func() {
 		if response != nil {
 			fn(httpRequest, response)

@@ -116,6 +116,6 @@ func EncodeResourceToJSON(obj interface{}) ([]byte, error) {
 type JWTServiceAccountJSON struct {
 	Type           string `json:"type"`
 	KeyID          string `json:"key-id"`           //nolint: tagliatelle
-	PrivateKeyData string `json:"private-key-data"` //nolint:gosec,tagliatelle
+	PrivateKeyData string `json:"private-key-data"` //nolint:tagliatelle
 	ClientID       string `json:"client-id"`        //nolint: tagliatelle
 }

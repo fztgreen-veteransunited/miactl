@@ -21,7 +21,7 @@ type JWTTokenRequest struct {
 }
 
 type RefreshTokenRequest struct {
-	RefreshToken string `json:"refreshToken"` //nolint:gosec
+	RefreshToken string `json:"refreshToken"`
 }
 
 type ServiceAccountRequest struct {
