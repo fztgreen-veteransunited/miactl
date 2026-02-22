@@ -42,8 +42,8 @@ type AuthProvider struct {
 }
 
 type UserToken struct {
-	AccessToken  string `json:"accessToken"`
-	RefreshToken string `json:"refreshToken"`
+	AccessToken  string `json:"accessToken"`  //nolint:gosec
+	RefreshToken string `json:"refreshToken"` //nolint:gosec
 	ExpiresAt    int64  `json:"expiresAt"`
 }
 
@@ -137,7 +137,7 @@ type CreateJob struct {
 
 type ServiceAccount struct {
 	ClientID         string `json:"clientId"`
-	ClientSecret     string `json:"clientSecret"`
+	ClientSecret     string `json:"clientSecret"` //nolint:gosec
 	ClientIDIssuedAt int64  `json:"clientIdIssuedAt"`
 	Company          string `json:"company"`
 }

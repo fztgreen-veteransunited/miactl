@@ -23,7 +23,7 @@ import (
 	"io"
 	"net/http"
 	"net/url"
-	"path"
+	"strings"
 )
 
 // Request wrap the http.Request configuration providing functions for configure it in an easier and contained way
@@ -135,7 +135,7 @@ func (r *Request) Error() error {
 func (r *Request) URL() *url.URL {
 	url := *r.restClient.baseURL
 
-	url.Path = path.Join(url.Path, r.apiPath)
+	url.Path = strings.TrimSuffix(url.Path, "/") + r.apiPath
 	url.RawQuery = r.params.Encode()
 
 	return &url
@@ -212,7 +212,7 @@ func (r *Request) request(ctx context.Context, fn func(*http.Request, *http.Resp
 		return err
 	}
 
-	response, err := r.restClient.client.Do(httpRequest)
+	response, err := r.restClient.client.Do(httpRequest) //nolint:gosec
 	func() {
 		if response != nil {
 			fn(httpRequest, response)

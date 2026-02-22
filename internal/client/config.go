@@ -67,7 +67,7 @@ type TLSClientConfig struct {
 // AuthConfig contains settings for settign up authentication for the http requests
 type AuthConfig struct {
 	ClientID          string
-	ClientSecret      string
+	ClientSecret      string //nolint:gosec
 	JWTKeyID          string
 	JWTPrivateKeyData string
 }

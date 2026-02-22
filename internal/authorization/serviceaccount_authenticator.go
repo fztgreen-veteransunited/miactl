@@ -149,7 +149,7 @@ func getJWTToken(ctx context.Context, apiClient client.Interface, keyID, clientI
 	}
 
 	type tempToken struct {
-		AccessToken string `json:"access_token"` //nolint: tagliatelle
+		AccessToken string `json:"access_token"` //nolint:gosec,tagliatelle
 		TokenTipe   string `json:"token_type"`   //nolint: tagliatelle
 		ExpiresIn   int    `json:"expires_in"`   //nolint: tagliatelle
 	}
